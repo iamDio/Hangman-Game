@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>!HANGMAN!</title>
+    <!--     <script type="text/javascript"type='text/javascript' language='javascript' src='./assets/javascript/game.js'>
+</script>  -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- jQuery Cdn -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+    <h1 class="text-center">hangman</h1>
+    <h3 id="loadPuzzle" class="text-center"> press any key to get started ! </h3>
+
+    <div class="row">
+    <div class="col-md-12" id="word"></div>
+    </div>
+    <div class = "row">
+	<div class="col-md-6" id="attemptsLeft">
+	<h3>REMAINING ATTEMPTS</h3>
+	</div>
+	<div class="col-md-6" id="wrongLetters">
+		<h3>GUESSED LETTERS</h3>
+	</div>
+</div>
+</div> <!-- container div -->
+
+    <script type="text/javascript">
+    /*   document.ready(function){};*/
+
+    var randomWord = [' Stark', 'Lannister', 'Tyrell', 'Baratheon']; //insert more
+    var puzzle=""; //word to be displayed after its selected from the array 
+    var correctLetters = []; //write function correctLetters.push that fills array with correct letters guessed. use #correctLetters to render to html using for loop and/or if/else 
+    var wrongLetters = []; //write function wrongLetters.push that fills array with wrong letters. use #wrongLetters to 	 					returnender to html using for loop and/or if/else
+    var wins = 0;
+    /* for (i=0; i< randomWord.lenght;i++){     for loop with if statement 
+    											that pushes guessedLetters to wrongLetters array
+	if (guessedLetters != randomWord){
+	guessedLetter.push  to wrongLetters array
+	} else {
+		 replace randomWord letters with "-" using 
+		 for( i = 0; i < randomWord.length; i++) {
+	word = word + "_"; 
+
+	function guessedLetter() { replace - with guessed letter
+    var str = document.querySelector("#word").textContent; 
+    var res = str.replace("dashes","correct letter");
+    document.querySelector("#word").textContent = res;
+
+
+	return word;
+	}
+    }
+    */
+    window.onload = function() {
+    var wordChoice = function() {
+        return randomWord[Math.floor(Math.random() * randomWord.length)];
+        console.log(wordChoice);
+    };
+
+    var word = wordChoice();
+    console.log(word);
+    document.querySelector('#word').textContent = word;
+
+        //event listener for key press
+        //loadPuzzle , display randomWord.length to user with a "-" string for each letter 
+        //document.querySelector("#loadPuzzle").textContent = 
+    };
+//event listeners 
+
+    document.onkeyup = function(event) {
+        var userGuess = event.key;
+ 	//record each time a key is pressed.
+     }
+
+
+	
+
+
+
+
+    </script>
+</body>
+
+</html>
